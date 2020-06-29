@@ -4,6 +4,8 @@ This demo is a quick way to show off Eclipse Che or CRW.
 
 The first part shows a demo with a Quarkus app and the second part shows how to use a factory url to open a workspace with one click.
 
+Here is a [video recording](https://www.youtube.com/watch?v=YaV5m3k5aYc) of the demo.
+
 Before you demo CRW, view this video and note the required messaging for the customer! 
 
 * [Video presentation by Brad Micklea](https://my.allego.com/play.do?contentId=659233&sch=20921) - for CRW messaging
