@@ -4,7 +4,7 @@ This demo is a quick way to show off Eclipse Che or CRW.
 
 The first part shows a demo with a Quarkus app and the second part shows how to use a factory url to open a workspace with one click.
 
-Here is a [video recording](https://www.youtube.com/watch?v=YaV5m3k5aYc) of the demo.
+Here is a [video recording](https://www.youtube.com/watch?v=YaV5m3k5aYc) of the demo, which also shows how to install CRW 2.1 on OpenShift 4.4 and also how to debug an app. 
 
 Before you demo CRW, view this video and note the required messaging for the customer! 
 
