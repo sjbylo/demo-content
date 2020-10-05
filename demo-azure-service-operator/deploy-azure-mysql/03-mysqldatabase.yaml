@@ -1,0 +1,7 @@
+apiVersion: azure.microsoft.com/v1alpha1
+kind: MySQLDatabase
+metadata:
+  name: mydb
+spec:
+  resourceGroup: aro-demo
+  server: my-demo-mysqlserver
