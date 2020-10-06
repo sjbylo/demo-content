@@ -110,6 +110,8 @@ Connect to the route's hostname to test the application.
 
 ```
 oc delete -f deploy-azure-mysql
+oc delete all -l app=vote-app
+oc delete all -l app=db
 oc delete project test-aso 
 ```
 
