@@ -2,11 +2,11 @@
 
 # Prepare to create the secret, create the file "data"
 
-Follow the Azure Service Operator's instructions.  
+Follow the Azure Service Operator's instructions in the OpenShift Console which show how to create the Azure Service Principle.
 
-This is one way to create the needed secret from the Service Principle credentials:
+The following is one way to create the needed secret from the Azure Service Principle credentials.
 
-Create a file with the following data. Ensure you replace the values with the proper Azure related values:
+Create a file with the following data. Ensure to replace the values with the proper Azure related values:
 
 ```
 AZURE_TENANT_ID=XXXXXXXX-YYYY-ZZZZ-1111-222222222222
@@ -26,7 +26,7 @@ oc create secret generic azureoperatorsettings --from-env-file=data -n openshift
 
 # Install the Operator
 
-Install ASO, as of writing - 0.37.0, with all the defaults using OCP Console.
+Install ASO (version 0.37.0 as of writing) with all the defaults using the OpenShift Console.
 
 
 # Workaround
@@ -57,6 +57,7 @@ The example manifest files will create the following resources:
 1. my-demo-mysqluser - Create a user called "user" with access to the database "mydb".
 
 Instantiate the manifests:
+
 ```
 oc create -f deploy-azure-mysql
 ```
@@ -71,14 +72,39 @@ eval `oc get secret my-demo-mysqluser -o go-template='{{range $k,$v := .data}}{{
 ```
 Note: My useful `ksec` script can also be used which is in this repo under the bin dir.
 
-# Log into the DB 
+# Log into the DB (optional)
+
+Install the mysql CLI first and run:
 
 ```
 mysql -h$fullyQualifiedServerName -u$username@$MySqlServerName -p$password -D$MySqlDatabaseName
 ```
-Install the mysql CLI first!
 
 Note, the username is made up of `<username>@<MySqlServerName>`
+
+# Test with an application
+
+Create a demo application, allowing it to connect to the Azure MySQL database:
+
+```
+oc new-app --docker-image=quay.io/sjbylo/flask-vote-app:latest --name vote-app \
+	-e ENDPOINT_ADDRESS="$fullyQualifiedServerName" \
+	-e PORT=3306 \
+	-e DB_NAME="$MySqlDatabaseName" \
+	-e MASTER_USERNAME="$username@$MySqlServerName" \
+	-e MASTER_PASSWORD="$password" \
+	-e DB_TYPE=mysql
+```
+
+Connect to the application:
+
+```
+oc expose svc vote-app  
+
+oc get route
+```
+
+Connect to the route's hostname to test the application.
 
 # Clean up
 
