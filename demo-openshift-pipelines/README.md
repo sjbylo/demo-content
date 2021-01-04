@@ -1,8 +1,7 @@
 # OpenShift Pipeline Demo
 
 To demo the Pipelines feature of version 4 of OpenShift there are a couple of things that need to be done to 
-ensure the default demos - provided by OpenShift - function correctly. 
-If these configuration changes are not followed the pipeline will fail. 
+ensure the default demos - provided by OpenShift - function correctly.  If these configuration changes are not followed the pipeline will fail. 
 
 Note that OpenShift Pipelines is a Tech Preview feature as of writing (OCP v4.6)
 
@@ -24,15 +23,17 @@ Note that OpenShift Pipelines is a Tech Preview feature as of writing (OCP v4.6)
     - Note that if you run this pipeline now it will fail because a persistent volume (PVC) is needed
   - Add a PVC:
     - Create a Persistent Volume Claim (PVC), e.g. 1GB in size 
-      - This can be done directly in the Developer Console if you search for "PVC"). Search for resource "PVC". 
+      - This can be done directly in the Developer Console if you search for the resource "PVC"
     - The PVC is used in the next step when the pipeline is stated 
   - Start the pipeline
     - If you start the pipeline without setting the PVC, you will see the error message: `mv: cannot stat /tmp/src/*: No such file or directory` in the build step
-    - Ensure a PVC has been created, as described above.
+    - Ensure a PVC has been created, as described above
     - Click on Pipeline Start
       - In the form verify all the values and fill in the missing values:
-        - "Minor version" : This is the builder image version, e.g. 3.6 for python would mean "6" needs to be filled in.  This will use the following builder image: python-36-rhel7.  If you are interested, you can view the image in the RH registry, here: https://catalog.redhat.com/software/containers/rhel8/python-36/5ba244fc5a134643ef2f04ba 
-      - For the Workspace, ensure the previously created PVC is selected (do not use "Empty Directory", otherwise the build will fail because the source code will be missing: `mv: cannot stat /tmp/src/*: No such file or directory` 
+        - "Minor version": Add "6"
+          - This is the builder image version, e.g. 3.6 for python would mean "6" needs to be filled in.  This will use the following builder image: python-36-rhel7.  If you are interested, you can view the image in the RH registry, here: https://catalog.redhat.com/software/containers/rhel8/python-36/5ba244fc5a134643ef2f04ba 
+        - For the Workspace, ensure the previously created PVC is selected
+          - do not use "Empty Directory", otherwise the build will fail because the source code will be missing: `mv: cannot stat /tmp/src/*: No such file or directory` 
     - View the pipeline executing the steps
     - Show each step executing 
     - Show the application has been re-deployed
