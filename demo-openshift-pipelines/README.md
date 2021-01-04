@@ -43,6 +43,7 @@ Note that OpenShift Pipelines is a Tech Preview feature as of writing (OCP v4.6)
   - Show how to edit the pipeline directly in the Developer Console
   - Click on the pipeline and then on Actions -> Edit Pipeline 
   - Add a node between or in parallel with any of the existing nodes by clicking on the "+" sign 
-    - select the "oc" task and accept all defaults 
+    - Select the "openshift-client" task and accept all defaults 
     - Show how easy it is to add in tasks into the pipeline 
 
+![Image of Pipeline Edit](edit-pipeline.png)
