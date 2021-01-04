@@ -7,7 +7,7 @@ For the impatient, the default Pipeline created by OpenShift 4.6 will only work 
 
 Note that OpenShift Pipelines is a Tech Preview feature as of writing (OCP v4.6)
 
-# Demo Setup 
+## Demo Setup 
   - Add the OpenShift Pipeline feature to your OpenShift cluster
     - As Cluster Administrator, install the Operator "Red Hat OpenShift Pipelines Operator - 1.2.1 provided by Red Hat" from the Administrator Console 
   - After the Operator has been installed and the "openshift-pipelines-operator" pod is running in the openshift-operators project, ensure the Pipeline option is visible in the Developer Console
@@ -20,7 +20,7 @@ Note that OpenShift Pipelines is a Tech Preview feature as of writing (OCP v4.6)
     - Select "Create Pipeline" (ensure the Pipeline feature Operator is installed, as above) 
       - If you see "There are no pipeline templates available for Python and Deployment combination", wait for the Operator to install and/or refresh the page. 
   - Let the application finish building and launching
-# Run the Pipeline
+## Run the Pipeline
   - Go to the Pipeline feature (in the Developer Console) 
     - Note that if you run this pipeline now it will fail because a persistent volume (PVC) is needed
   - Add a PVC:
@@ -39,7 +39,7 @@ Note that OpenShift Pipelines is a Tech Preview feature as of writing (OCP v4.6)
     - View the pipeline executing the steps
     - Show each step executing 
     - Show the application has been re-deployed
-# Optional Demo
+## Optional Demo
   - Show how to edit the pipeline directly in the Developer Console
   - Click on the pipeline and then on Actions -> Edit Pipeline 
   - Add a node between or in parallel with any of the existing nodes by clicking on the "+" sign 
