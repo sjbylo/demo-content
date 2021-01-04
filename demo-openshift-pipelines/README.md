@@ -30,7 +30,7 @@ Note that OpenShift Pipelines is a Tech Preview feature as of writing (OCP v4.6)
     - Ensure a PVC has been created, as described above
     - Click on Pipeline Start
       - In the form verify all the values and fill in the missing values:
-        - "Minor version": Add "6"
+        - "Minor version": Enter "6"
           - This is the builder image version, e.g. 3.6 for python would mean "6" needs to be filled in.  This will use the following builder image: python-36-rhel7.  If you are interested, you can view the image in the RH registry, here: https://catalog.redhat.com/software/containers/rhel8/python-36/5ba244fc5a134643ef2f04ba 
         - For the Workspace, ensure the previously created PVC is selected
           - do not use "Empty Directory", otherwise the build will fail because the source code will be missing: `mv: cannot stat /tmp/src/*: No such file or directory` 
@@ -44,4 +44,3 @@ Note that OpenShift Pipelines is a Tech Preview feature as of writing (OCP v4.6)
     - select the "oc" task and accept all defaults 
     - Show how easy it is to add in tasks into the pipeline 
 
- 
