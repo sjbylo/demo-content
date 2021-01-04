@@ -1,7 +1,9 @@
 # OpenShift Pipeline Demo
 
 To demo the Pipelines feature of version 4 of OpenShift there are a couple of things that need to be done to 
-ensure the default demos - provided by OpenShift - function correctly.  If these configuration changes are not followed the pipeline will fail. 
+ensure the default demos - provided by OpenShift - function correctly.  If these configuration changes are not followed the pipeline will fail.  
+
+For the impatient, the default Pipeline created by OpenShift 4.6 will only work if a PVC is created for the Workspace and if the correct builder image "minor version" is inserted, e.g. "6" for "python-36-rhel7" image.
 
 Note that OpenShift Pipelines is a Tech Preview feature as of writing (OCP v4.6)
 
