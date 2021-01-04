@@ -13,7 +13,7 @@ Note that OpenShift Pipelines is a Tech Preview feature as of writing (OCP v4.6)
 - Install an application 
   - In the Developer Console create a project 
   - Create an application in the usual way, e.g. with "From Git" or from "Container Image" or others, via the "+Add" menu item in the Developer Console
-  - Using the "From Git" feature create a simple application using the following parameters:
+  - Using the "From Git" feature create a simple application using the following parameters:
     - Image URL: https://github.com/sclorg/django-ex.git 
     - Select the builder image "Python 3.6 (UBI 8)"
     - Select "Create Pipeline" (ensure the Pipeline feature Operator is installed, as above) 
