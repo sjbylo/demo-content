@@ -35,6 +35,7 @@ Note that OpenShift Pipelines is a Tech Preview feature as of writing (OCP v4.6)
       - For the Workspace, ensure the previously created PVC is selected (do not use "Empty Directory", otherwise the build will fail because the source code will be missing: `mv: cannot stat /tmp/src/*: No such file or directory` 
     - View the pipeline executing the steps
     - Show each step executing 
+    - Show the application has been re-deployed
 - Optional Demo
   - Show how to edit the pipeline directly in the Developer Console
   - Click on the pipeline and then on Actions -> Edit Pipeline 
