@@ -46,4 +46,4 @@ Note that OpenShift Pipelines is a Tech Preview feature as of writing (OCP v4.6)
     - Select the "openshift-client" task and accept all defaults 
     - Show how easy it is to add in tasks into the pipeline 
 
-![Image of Pipeline Edit](edit-pipeline.png|width=100)
+![Image of Pipeline Edit](edit-pipeline.png | width=100)
