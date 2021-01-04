@@ -2,7 +2,7 @@
 
 Various demos and workshop content related to Containers, Kubernetes and OpenShift
 
-# demo-openshift-pipelines
+# [demo-openshift-pipelines](demo-openshift-pipelines/)
 
 Dec 2020 - Demo of the default pipelines in OpenShift 4.6+
 
