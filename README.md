@@ -1,4 +1,4 @@
-# demo-content
+# Demo Content
 
 Various demos and workshop content related to Containers, Kubernetes and OpenShift
 
