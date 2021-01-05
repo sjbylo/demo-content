@@ -14,3 +14,4 @@ Sep 2020 - Demo of Azure Service Operator using Azure MySQL
 
 Jun 2020 - Demo of CodeReady Workspaces and debugging an application 
 
+
