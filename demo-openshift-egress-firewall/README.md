@@ -37,19 +37,19 @@ oc create -f enp.yaml
 Note that, for the above example, the SDN will first resolve each domain name - bbc.com & www.bbc.com - and then Allow all resolved IP addresses.
 
 
-## These calls should return 301, success
+## These calls should return 301, allowed
 ```
 oc exec fedora-777d6488ff-5c88m -n egress -- curl --connect-timeout 5 -o /dev/null -s -w "%{http_code}\n" -I bbc.com
 oc exec fedora-777d6488ff-5c88m -n egress -- curl --connect-timeout 5 -o /dev/null -s -w "%{http_code}\n" -I www.bbc.com
 ```
 
-## These calls should fail
+## These calls should be denied
 ```
 oc exec fedora-777d6488ff-5c88m -n egress -- curl --connect-timeout 5 -o /dev/null -s -w "%{http_code}\n" -I wikipedia.com
 oc exec fedora-777d6488ff-5c88m -n egress -- curl --connect-timeout 5 -o /dev/null -s -w "%{http_code}\n" -I fr.wikipedia.com
 ```
 
-# Make changes and reconfig
+## Make changes and reconfig
 ```
 oc delete -f enp.yaml; sleep 0.5; oc create -f enp.yaml
 ```
