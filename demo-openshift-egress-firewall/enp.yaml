@@ -1,0 +1,15 @@
+apiVersion: network.openshift.io/v1
+kind: EgressNetworkPolicy
+metadata:
+  name: default
+spec:
+  egress: 
+  - type: Allow
+    to:
+      dnsName: ica.gov.sg
+  - type: Allow
+    to:
+      dnsName: www.ica.gov.sg
+  - type: Deny
+    to:
+      cidrSelector: 0.0.0.0/0
