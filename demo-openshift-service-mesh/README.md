@@ -10,7 +10,7 @@ It is based on the great work by the Kiali Team and their [Tutorial](https://kia
 
 Install the Service Mesh Operator onto OpenShift (tested on v4.7) 
 
-   1. Install ElasticSearch, Kiali and Jaeger Operators and wait for them to be successfully installed
+   1. Install Red Hat ElasticSearch, Kiali and Jaeger via the Admin menu Operators -> OperatorHub and wait for them to be successfully installed ([OpenShift Docs](https://docs.openshift.com/container-platform/4.7/service_mesh/v2x/installing-ossm.html#ossm-install-ossm-operator_installing-ossm))
    1. Install the OpenShift Service Mesh Operator and wait for it to be successfully installed
 
 ## Demo Steps
@@ -50,7 +50,7 @@ Clean up
 ---
 
 Example using Kiali to allow traffic to enter the mesh via the OpenShift route and the mesh ingress gateway
-(Ensure the Hosts tab also shows the same hostname).
+(ensure the ``Hosts`` tab also shows the same hostname).
 
 <img src="kiali-wizard-gw-vs.png" alt="Image of Kiali Wizard" width=600>
 
