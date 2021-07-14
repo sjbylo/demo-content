@@ -49,7 +49,8 @@ Clean up
 
 ---
 
-Example using Kiali to allow traffic to enter the mesh via the OpenShift route and the mesh ingres gateway.
+Example using Kiali to allow traffic to enter the mesh via the OpenShift route and the mesh ingres gateway
+(Ensure the Hosts tab also shows the same hostname).
 
 <img src="kiali-wizard-gw-vs.png" alt="Image of Kiali Wizard" width="800">
 
