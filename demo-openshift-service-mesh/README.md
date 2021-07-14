@@ -2,7 +2,7 @@
 
 ## Demo Preparation 
 
-Install the OpenShift Service Mesh Operator
+Install the Service Mesh Operator onto OpenShift (tested on v4.7) 
 
    1. Install ElasticSearch, Kiali and Jaeger Operators and wait for them to be successfully installed
    1. Install the OpenShift Service Mesh Operator and wait for it to be successfully installed
@@ -36,3 +36,6 @@ Part 2
    1. Show highlighting the bottlenecks in the graph using "responsetime > 1000"
    1. Show traffic history
 
+Clean up
+
+   1. ``./3-cleanup.sh``
