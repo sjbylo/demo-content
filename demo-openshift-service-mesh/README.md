@@ -29,7 +29,7 @@ Part 1
 Part 2
 
    1. Add the `control` pod into the mesh (Workload -> Control -> Actions -> Enable Auto Injection)
-   1. Create the `Gateway` and `VirtualService` (Services -> Control -> Actions -> Request Routing). See below image. 
+   1. Create the `Gateway` and `VirtualService` (Services -> Control -> Actions -> Request Routing - See below image)
    1. Show the generated Gateway & VirtualService resources Istio Config Menu
    1. Show resource semantic verification in Kiali
    1. Show the control service now in the Graph (ensure all 3 namespaces are selected)
