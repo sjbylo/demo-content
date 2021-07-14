@@ -31,7 +31,7 @@ Part 2
    1. Add the `control` pod into the mesh (Workload -> Control -> Actions -> Enable Auto Injection)
    1. Create the `Gateway` and `VirtualService` (Services -> Control -> Actions -> Request Routing - See below image)
    1. Show the generated Gateway & VirtualService resources Istio Config Menu
-   1. Show resource semantic verification in Kiali
+   1. Show resource semantic verification in Kiali by editing the ``control`` VirtualService. Change ``v1`` to ``v2`` and save.  The semantic error will be highlighted.  Change it back to ``v1``.
    1. Show the control service now in the Graph (ensure all 3 namespaces are selected)
    1. Add the portal services into the mesh using Kiali (travel-portal ns) 
    1. Add all other services into the mesh using a script (travel-agency ns)
@@ -49,7 +49,7 @@ Clean up
 
 ---
 
-Example using Kiali to allow traffic to enter the mesh via the OpenShift route and the mesh ingres gateway
+Example using Kiali to allow traffic to enter the mesh via the OpenShift route and the mesh ingress gateway
 (Ensure the Hosts tab also shows the same hostname).
 
 <img src="kiali-wizard-gw-vs.png" alt="Image of Kiali Wizard" width="800">
