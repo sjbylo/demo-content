@@ -4,7 +4,7 @@ I believe that Kiali is a great way to learn abou the Service Mesha nnd istio in
 
 This demo shows how to get a normal application running in the service mesh using Kiali.  
 It is based on the great work by the Kiali Team and their [Tutorial](https://kiali.io/documentation/latest/tutorial/)
-([video](https://events.istio.io/istiocon-2021/workshops/istio-cookbook-kiali-recipe/). 
+([video](https://events.istio.io/istiocon-2021/workshops/istio-cookbook-kiali-recipe/)).
 
 ## Demo Preparation 
 
