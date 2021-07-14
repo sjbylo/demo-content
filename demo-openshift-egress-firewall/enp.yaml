@@ -6,10 +6,13 @@ spec:
   egress: 
   - type: Allow
     to:
-      dnsName: ica.gov.sg
+      dnsName: openshift-squid.proxy.svc.cluster.local
   - type: Allow
     to:
-      dnsName: www.ica.gov.sg
+      dnsName: bbc.com
+  - type: Allow
+    to:
+      dnsName: www.bbc.com
   - type: Deny
     to:
       cidrSelector: 0.0.0.0/0
