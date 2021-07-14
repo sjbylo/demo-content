@@ -4,7 +4,7 @@ I believe that Kiali is a great way to learn abou the Service Mesha nnd istio in
 
 This demo shows how to get a normal application running in the service mesh using Kiali.  
 It is based on the great work by the Kiali Team and their Tutorial  (video). 
-[https://kiali.io/documentation/latest/tutorial/](Tutorial)
+[Tutorial](https://kiali.io/documentation/latest/tutorial/)
 
 ## Demo Preparation 
 
