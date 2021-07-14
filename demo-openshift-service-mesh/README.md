@@ -38,4 +38,6 @@ Part 2
 
 Clean up
 
-   1. ``./3-cleanup.sh``
+   1. Remove the demo app using ``./3-cleanup.sh``
+   1. Optionally delete all of the service mesh safely using ``./delete-all-service-mesh.sh``
+
